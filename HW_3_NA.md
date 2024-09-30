@@ -85,18 +85,17 @@ __dict__ - словарь, в котором хранится пространс
 
 ## Задания:
 1) Создайте класс для хранения комплексных чисел с инициализатором.
-        <html>
-          <head>
-            <title>Test</title>
-          </head>
+```python
 
 class Storage:
     def __init__(self, real, imaginary):
         self.real = real
         self.imaginary = imaginary
-
+```
 3) Реализуйте методы, позволяющие представлять комплексное число в 
 экспоненциальной форме.
+```python
+
 import math
 class Storage:
     def __init__(self, real, imaginary):
@@ -107,12 +106,14 @@ class Storage:
         r = (self.real**2+self.imaginary**2)**0.5
         phi = math.atan2(self.imaginary, self.real)
         print("Экспоненциальная форма: ", r , "* exp(i *", phi, ")")
+```
 
-
-4) Добавьте функции, позволяющие складывать, вычитать, 
+5) Добавьте функции, позволяющие складывать, вычитать, 
 умножать и делить два комплексных числа, результатом работы 
 которых будет новое комплексное число (именно функции, не методы, 
 перегружать операторы тоже не надо).
+```python
+
 import math
 class Storage:
     def __init__(self, real, imaginary):
@@ -143,3 +144,4 @@ def division(a, b):
     denominator = b.real**2 + b.imaginary**2
     new_num = multiplication(a, b.conj())
     return Storage(new_num.real / denominator, new_num.imaginary / denominator)
+```
